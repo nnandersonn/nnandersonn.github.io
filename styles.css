@@ -21,18 +21,85 @@ header{
 
 }
 
-.about-me{
-    height: 90vh;
-    min-height: 300px;
+button{
+    background-color: black;
+    border: none;
+    color: white;
+    font-size: large;
+    margin: 20px;
+    border-radius: 10px;
+    transition-timing-function: ease-in-out;
+    transition: 0.5s;
+}
 
+button:hover{
+    box-shadow: 0px 0px 12px 5px rgb(194, 194, 194), inset 0px 0px 3px 1px rgb(194, 194, 194);
+}
+
+.wrapper{
+    height: 100vh;
+    overflow-y: auto;
+    -webkit-overflow-y: auto;
+    overflow-x: hidden; 
+    perspective: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    
+}
+.container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    transform-style: preserve-3d;
+    z-index: -1;
+    box-sizing: border-box;
+}
+
+.content-container{
+    height: 100%;
+}
+
+.background{
+    transform: translateZ(-10px);
+    scale: 2;
+}
+.foreground{
+    transform: translateZ(-5px);
+    scale: 1.5;
+}
+
+.background, .foreground {
+    position: absolute;
+}
+
+.about-me{
+    height: 60vh;
+    min-height: 300px;
+    text-align: center;
 }
 
 .projects{
-    height: 90vh;
+    height: 60vh;
     min-height: 300px;
+    text-align: center
 }
 
 .contact{
-    height: 50vh;
+    height: 60vh;
     min-height: 300px;
+    text-align: center;
 }
+
+/* ::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 7px;
+    height: 7px;
+    -webkit-overflow-scrolling: auto;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.5);
+    -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+} */
