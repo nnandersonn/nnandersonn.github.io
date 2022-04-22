@@ -3,11 +3,13 @@ console.log('js connected')
 const summaryButton = document.getElementById('summary-button')
 const experienceButton = document.getElementById('experience-button')
 const educationButton = document.getElementById('education-button')
+const submitButton = document.getElementById('submit-button')
 const aboutMeArea = document.getElementById('about-me-area')
 
 summaryButton.addEventListener('click', ()=>underlineButton(summaryButton))
 experienceButton.addEventListener('click', ()=>underlineButton(experienceButton))
 educationButton.addEventListener('click', ()=>underlineButton(educationButton))
+submitButton.addEventListener('click', ()=>alert('Message sent'))
 
 window.onload(underlineButton(summaryButton))
 

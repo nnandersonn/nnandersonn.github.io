@@ -15,15 +15,38 @@
         <div class="container">
             
 
-            <img src="./imgs/light-stars.png" class="background">
-            <img src="./imgs/light-stars-flipped.png" class="foreground">
+            <img src="./imgs/tiny-stars.png" class="background">
+            <img src="./imgs/light-stars-2.png" class="foreground">
+            <div class="planet-layer">
+                <div class="planet-holder">
+                    <img src="./imgs/gas-giant.gif" id="gas-giant">
+                </div>
+                <div class="planet-holder">
+                    <img src="./imgs/moon.gif" id="moon">
+                </div>
+            </div>
+            <div class="astronaut-layer">
+                <div class="astronaut-holder">
+                    <div class="quick-nav">
+                        <a href="#header" class="quick-nav-buttons" id="quick-nav-top">top</a>
+                        <a href="#about-me" class="quick-nav-buttons" id="quick-nav-about-me">about me</a>
+                        <a href="#projects" class="quick-nav-buttons" id="quick-nav-projects">projects</a>
+                        <a href="#contact" class="quick-nav-buttons" id="quick-nav-contact-me">contact me</a>
+                    </div>
+                    <img src="./imgs/small-astronaut.png" id="astronaut">
+                </div>
+                
+            </div>
+            
 
             <div class="content-container">
-                <header>
+                
+                <header id="header">
                     <h1>Nick Anderson</h1>
                     <h2>developer</h2>
+                    
                 </header>
-                <div class="about-me"> 
+                <div class="about-me" id="about-me"> 
                     <h2>about me</h2>
                     <div class="about-me-nav">
                         <button id="summary-button">summary</button>
@@ -34,7 +57,7 @@
             
                     </div>
                 </div>
-                <div class="projects">
+                <div class="projects" id="projects">
                     <h2>projects</h2>
                     <div id="projects-area">
                         <H3 class="project-titles">Chopped Recipes</H3>
@@ -47,8 +70,15 @@
                         </div>
                     </div>
                 </div>
-                <div class="contact">
+                <div class="contact" id="contact">
                     <h2>contact me</h2>
+                    <div class="contact-card">
+                        <input type="text" placeholder="Enter name" id="input-name">
+                        <input type="text" placeholder="Enter your email address" id="input-email">
+                        <textarea id="textarea-message" placeholder="Write a message"></textarea>
+
+                        <button id="submit-button">submit</button>
+                    </div>
                 </div>
             </div>
             
