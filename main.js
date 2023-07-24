@@ -86,8 +86,7 @@ function submitGuess(){
         addRow(guessHighLow)
         if(allCorrect == true){
             showWinner(currentHexGuess)
-        }
-        if(allGuesses.length == 4){
+        }else if(allGuesses.length == 4){
             showLoser(currentHexGuess)
         }
     }
