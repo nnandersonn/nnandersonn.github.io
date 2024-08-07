@@ -211,37 +211,43 @@ function hexToRgb(hex) {
 
 
 function getNewColor(){
-    fetch(apiUrl, {cache: "no-store"})
-    .then(response => {
-        if (!response.ok) {
-        throw new Error(`Network response was not ok. Status code: ${response.status}`);
-        }
+    // fetch(apiUrl, {cache: "no-store"})
+    // .then(response => {
+    //     if (!response.ok) {
+    //     throw new Error(`Network response was not ok. Status code: ${response.status}`);
+    //     }
         
-        return response.json();
+    //     return response.json();
         
-    })
-    .then(data => {
-        // Process the JSON data here
-        if ("colors" in data && data.colors.length > 0) {
-        const colors = data.colors;
-        const firstColor = colors[0]; 
-        if ("hex" in firstColor) {
-            const hexValue = firstColor.hex;
-            if(!hexValue){
-                getNewColor()
-            }
-            mainColor = "#"+hexValue;
-            mainColorSwatch.style.backgroundColor = mainColor
-        } else {
-            console.log("No 'hex' value found in the first color entry.");
-        }
-        } else {
-        console.log("No color data found in the JSON.");
-        }
-    })
-    .catch(error => {
-        console.error('Error fetching data:', error);
-    });
+    // })
+    // .then(data => {
+    //     // Process the JSON data here
+    //     if ("colors" in data && data.colors.length > 0) {
+    //     const colors = data.colors;
+    //     const firstColor = colors[0]; 
+    //     if ("hex" in firstColor) {
+    //         const hexValue = firstColor.hex;
+    //         if(!hexValue){
+    //             getNewColor()
+    //         }
+    //         mainColor = "#"+hexValue;
+    //         mainColorSwatch.style.backgroundColor = mainColor
+    //     } else {
+    //         console.log("No 'hex' value found in the first color entry.");
+    //     }
+    //     } else {
+    //     console.log("No color data found in the JSON.");
+    //     }
+    // })
+    // .catch(error => {
+    //     console.error('Error fetching data:', error);
+    // });
+
+    let r = Math.floor(Math.random() * 256)
+    let g = Math.floor(Math.random() * 256)
+    let b = Math.floor(Math.random() * 256)
+    mainColor = rgbToHex(r,g,b)
+    mainColorSwatch.style.backgroundColor = mainColor
 }
 
 window.onload = function(){
